@@ -13,7 +13,7 @@ docker build -t acs:latest .
 To run:
 ```bash
 docker run -t --name acs \
--v server:/server/asseto \
+-v server:/server/assetto \
 -v $(pwd)/config.yml:/server/config.yml \
 -p 8772:8772 \ #Server manager port
 -p 9600:9600 \ #Game server port

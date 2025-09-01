@@ -9,5 +9,5 @@ services:
       - "9600:9600/udp" #Game server port (UDP)
       - "8081:8081" #Asseto corsa API
     volumes:
-      - ./server-install:/server/asseto #Server install dir
+      - ./server-install:/server/assetto #Server install dir
       - ./config.yml:/server/config.yml #Config mount
