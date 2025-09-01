@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server-manager:
+    image: acs:latest
+    ports:
+      - "8772:8772" #Server manager port
+      - "9600:9600" # Game server port
+      - "9600:9600/udp" #Game server port (UDP)
+      - "8081:8081" #Asseto corsa API
+    volumes:
+      - ./server-install:/server/asseto #Server install dir
+      - ./config.yml:/server/config.yml #Config mount
