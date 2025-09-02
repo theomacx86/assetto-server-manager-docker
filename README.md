@@ -13,11 +13,23 @@ docker build -t acs:latest .
 To run:
 ```bash
 docker run -t --name acs \
-    -v server:/server/assetto \
+    -v $(pwd)server:/server/assetto \
     -v $(pwd)/config.yml:/server/config.yml \
     -p 8772:8772 \
     -p 9600:9600 \
     -p 9600:9600/udp \
     -p 8081:8081 \
     acs:latest
+```
+
+Prebuilt images are available on Docker Hub (https://hub.docker.com/r/theomacx86/assetto-server-manager-docker)
+```bash
+docker run -t --name acs \
+    -v $(pwd)server:/server/assetto \
+    -v $(pwd)/config.yml:/server/config.yml \
+    -p 8772:8772 \
+    -p 9600:9600 \
+    -p 9600:9600/udp \
+    -p 8081:8081 \
+    theomacx86/assetto-server-manager-docker:latest
 ```
